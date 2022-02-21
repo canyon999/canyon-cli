@@ -3,8 +3,8 @@ const program = require('commander')
 const fs = require('fs')
 const nyc = require('nyc')
 const exec = require('child_process').exec
-
-program.version('1.0.3')
+console.log(nyc,nyc)
+program.version('1.0.4')
 
 program
     .command('instrument')

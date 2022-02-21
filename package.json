@@ -1,6 +1,6 @@
 {
   "name": "canyon-cli",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "",
   "main": "main.js",
   "scripts": {
@@ -14,9 +14,6 @@
   "license": "ISC",
   "dependencies": {
     "commander": "^9.0.0",
-    "nyc": "^15.1.0"
-  },
-  "peerDependencies": {
     "nyc": "^15.1.0"
   }
 }
