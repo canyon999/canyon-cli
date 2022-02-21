@@ -1,9 +1,10 @@
 #! /usr/bin/env node
 const program = require('commander')
 const fs = require('fs')
+const nyc = require('nyc')
 const exec = require('child_process').exec
 
-program.version('1.0.1')
+program.version('1.0.2')
 
 program
     .command('instrument')
