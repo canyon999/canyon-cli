@@ -3,7 +3,7 @@ const program = require('commander')
 const fs = require('fs')
 const exec = require('child_process').exec
 
-program.version('0.0.1')
+program.version('1.0.1')
 
 program
     .command('instrument')
@@ -23,20 +23,20 @@ program
         fs.writeFile('./canyon.json', JSON.stringify(canyonJson), (error) => {
             // 创建失败
             if(error){
-                console.log(`创建失败：${error}`)
+                console.log(`[ Canyon ] 创建失败：${error}`)
             }
             // 创建成功
-            console.log(`canyon.json创建成功！`)
+            console.log(`[ Canyon ] canyon.json创建成功！`)
 
 
             // 插桩代码
-            exec(`nyc instrument ${first} ${second} && cp -rf ./${second}/ ./${first} && rm -rf ./${second}`, function(error, stdout, stderr) {
+            exec(`nyc instrument ${first} ${second} && cp -rf ./${second}/* ./${first} && rm -rf ./${second}`, function(error, stdout, stderr) {
                 if (error) {
                     console.error('error: ' + error);
                     return;
                 }
             })
-            console.log('插桩成功！')
+            console.log('[ Canyon ] 插桩成功！')
         })
 
     })
