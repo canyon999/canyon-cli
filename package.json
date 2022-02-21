@@ -1,0 +1,19 @@
+{
+  "name": "canyon-cli",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rm -rf dist && cp -r src dist"
+  },
+  "bin": {
+    "canyon": "main.js"
+  },
+  "author": "Allen Zhang (张涛)",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^9.0.0",
+    "nyc": "^15.1.0"
+  }
+}
